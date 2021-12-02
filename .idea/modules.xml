@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Les 1/Les 1.iml" filepath="$PROJECT_DIR$/Les 1/Les 1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Les 2/Les 2.iml" filepath="$PROJECT_DIR$/Les 2/Les 2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Les 3/Les 3.iml" filepath="$PROJECT_DIR$/Les 3/Les 3.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/OOP.iml" filepath="$PROJECT_DIR$/.idea/OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practicum 1/Practicum 1.iml" filepath="$PROJECT_DIR$/Practicum 1/Practicum 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practicum 2/Practicum 2.iml" filepath="$PROJECT_DIR$/Practicum 2/Practicum 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practicum 3/Practicum 3.iml" filepath="$PROJECT_DIR$/Practicum 3/Practicum 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practicum 4/Practicum 4.iml" filepath="$PROJECT_DIR$/Practicum 4/Practicum 4.iml" />
     </modules>
   </component>
 </project>
