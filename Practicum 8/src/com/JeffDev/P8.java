@@ -138,13 +138,7 @@ abstract class Voertuig implements Goed {
         return huidigePrijs;
     }
 
-    @Override
-    public boolean equals(Object voertuig) {
-        if (this == voertuig) return true;
-        if (voertuig == null || getClass() != voertuig.getClass()) return false;
-        Voertuig checkVoertuig = (Voertuig) voertuig;
-        return jaar == checkVoertuig.jaar && Objects.equals(type, checkVoertuig.type);
-    }
+
 
     @Override
     public String toString() {
@@ -162,7 +156,13 @@ class Auto extends Voertuig {
         this.kenteken = kenteken;
     }
 
-
+    @Override
+    public boolean equals(Object auto) {
+        if (this == auto) return true;
+        if (auto == null || getClass() != auto.getClass()) return false;
+        Auto checkVoertuig = (Auto) auto;
+        return jaar == checkVoertuig.jaar && Objects.equals(type, checkVoertuig.type) && Objects.equals(kenteken, checkVoertuig.kenteken);
+    }
 
     @Override
     public double huidigeWaarde() {
@@ -181,6 +181,13 @@ class Fiets extends Voertuig {
         this.framenummer = framenummer;
     }
 
+    @Override
+    public boolean equals(Object fiets) {
+        if (this == fiets) return true;
+        if (fiets == null || getClass() != fiets.getClass()) return false;
+        Fiets checkVoertuig = (Fiets) fiets;
+        return jaar == checkVoertuig.jaar && Objects.equals(type, checkVoertuig.type) && Objects.equals(framenummer,checkVoertuig.framenummer);
+    }
 
     @Override
     public double huidigeWaarde() {
