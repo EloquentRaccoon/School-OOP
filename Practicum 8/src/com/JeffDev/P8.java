@@ -114,7 +114,7 @@ class Computer implements Goed {
 }
 
 abstract class Voertuig implements Goed {
-    protected String type;
+    private String type;
     protected double prijs;
     protected int jaar;
 
@@ -125,6 +125,14 @@ abstract class Voertuig implements Goed {
         this.type = type;
         this.prijs = prijs;
         this.jaar = jaar;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public double huidigeWaarde(double rente) {
@@ -150,7 +158,7 @@ class Auto extends Voertuig {
     private final String kenteken;
 
     Auto(String type, double prijs, int jaar, String kenteken) {
-        this.type = type;
+        super.setType(type);
         this.prijs = prijs;
         this.jaar = jaar;
         this.kenteken = kenteken;
@@ -161,7 +169,7 @@ class Auto extends Voertuig {
         if (this == auto) return true;
         if (auto == null || getClass() != auto.getClass()) return false;
         Auto checkVoertuig = (Auto) auto;
-        return jaar == checkVoertuig.jaar && Objects.equals(type, checkVoertuig.type) && Objects.equals(kenteken, checkVoertuig.kenteken);
+        return jaar == checkVoertuig.jaar && Objects.equals(super.getType(), checkVoertuig.getType()) && Objects.equals(kenteken, checkVoertuig.kenteken);
     }
 
     @Override
@@ -175,7 +183,7 @@ class Fiets extends Voertuig {
     private final int framenummer;
 
     Fiets(String type, double prijs, int jaar, int framenummer) {
-        this.type = type;
+        super.setType(type);
         this.prijs = prijs;
         this.jaar = jaar;
         this.framenummer = framenummer;
@@ -186,7 +194,7 @@ class Fiets extends Voertuig {
         if (this == fiets) return true;
         if (fiets == null || getClass() != fiets.getClass()) return false;
         Fiets checkVoertuig = (Fiets) fiets;
-        return jaar == checkVoertuig.jaar && Objects.equals(type, checkVoertuig.type) && Objects.equals(framenummer,checkVoertuig.framenummer);
+        return jaar == checkVoertuig.jaar && Objects.equals(super.getType(), checkVoertuig.getType()) && Objects.equals(framenummer,checkVoertuig.framenummer);
     }
 
     @Override
