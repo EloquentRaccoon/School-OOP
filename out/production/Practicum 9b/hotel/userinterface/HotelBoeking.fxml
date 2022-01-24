@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel.userinterface.HotelBoekingController">
+    <children>
+        <Label layoutX="31.0" layoutY="20.0" prefHeight="28.0" prefWidth="199.0" text="Voer uw gegevens in!">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="56.0" layoutY="62.0" nodeOrientation="LEFT_TO_RIGHT" text="Naam:">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Label>
+        <TextField fx:id="naam" alignment="TOP_LEFT" layoutX="290.0" layoutY="62.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="286.0">
+        </TextField>
+        <Label layoutX="57.0" layoutY="113.0" nodeOrientation="LEFT_TO_RIGHT" text="Adres:">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Label>
+        <TextField fx:id="adres" alignment="TOP_LEFT" layoutX="290.0" layoutY="113.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="286.0">
+        </TextField>
+        <Label layoutX="55.0" layoutY="165.0" nodeOrientation="LEFT_TO_RIGHT" text="Aankomstdatum:">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Label>
+        <DatePicker fx:id="aankomstDatum" layoutX="290.0" layoutY="166.0" maxHeight="30.0" prefHeight="30.0" prefWidth="286.0" />
+        <Label layoutX="55.0" layoutY="221.0" maxHeight="30.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="137.0" text="Vertrekdatum:">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Label>
+        <DatePicker fx:id="vertrekDatum" layoutX="290.0" layoutY="220.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="286.0" />
+        <Label layoutX="57.0" layoutY="270.0" nodeOrientation="LEFT_TO_RIGHT" text="Kamertype:">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Label>
+        <ComboBox fx:id="kamerType" layoutX="293.0" layoutY="272.0" prefHeight="26.0" prefWidth="286.0" />
+        <Button layoutX="433.0" layoutY="347.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+        <Button layoutX="505.0" layoutY="347.0" mnemonicParsing="false" onAction="#voegBoekingToe" text="Boek" />
+    </children>
+</AnchorPane>

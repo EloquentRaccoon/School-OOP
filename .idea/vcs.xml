@@ -2,5 +2,12 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HotelApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HotelApp_opdracht 10" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HotelApp_opdracht 9B" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Practicum 9/src/com/JeffDev/HotelApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Practicum 9/src/com/JeffDev/P9b" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Practicum 9/src/com/JeffDev/P9b/HotelApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Practicum 9b" vcs="Git" />
   </component>
 </project>

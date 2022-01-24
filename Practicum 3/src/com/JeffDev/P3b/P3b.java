@@ -7,7 +7,7 @@ public class P3b {
         try {
             c1 = new Cirkel("c1",10, 0, 0);
             c2 = new Cirkel("c2",0, 10, 10);
-        } catch (IllegalArgumentException iae) {
+        } catch (Exception iae) {
             System.out.println(iae.getMessage());
         }
 
@@ -22,9 +22,9 @@ class Cirkel {
     private final int xPositive;
     private final int yPositive;
 
-    public Cirkel(String name, int radius, int xPositive, int yPositive){
+    public Cirkel(String name, int radius, int xPositive, int yPositive) throws Exception {
         if(radius <= 0 ){
-            throw new IllegalArgumentException("Radius moet groter dan 0 zijn! Controlleer Cirkel: " + name);
+            throw new Exception("Radius moet groter dan 0 zijn! Controlleer Cirkel: " + name);
         } else {
             this.name = name;
             this.radius = radius;

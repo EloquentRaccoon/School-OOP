@@ -6,7 +6,7 @@ class P3aTest {
 
     @Test
     void voetbalclubAanmaken(){
-        Voetbalclub club1 = new Voetbalclub("");
+        Voetbalclub club1 = new Voetbalclub(null);
         if(club1.getNaam().isEmpty()){
             assertEquals(club1.getNaam(), "FC");
         }

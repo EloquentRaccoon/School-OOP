@@ -38,7 +38,7 @@ class Huis {
 
     @Override
     public String toString() {
-        return String.format("Huis %s2 is gebouwd in %s1 \r\nen heeft huisbaas %s", bouwjaar, adres, huisbaas);
+        return String.format("Huis %s is gebouwd in %s \r\nen heeft huisbaas %s", bouwjaar, adres, huisbaas);
     }
 }
 
@@ -53,6 +53,6 @@ class Persoon {
 
     @Override
     public String toString() {
-        return String.format("%s1; leeftijd %s2 jaar", naam, leeftijd);
+        return String.format("%s; leeftijd %s jaar", naam, leeftijd);
     }
 }

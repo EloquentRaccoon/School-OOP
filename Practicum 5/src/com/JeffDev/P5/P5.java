@@ -14,7 +14,7 @@ public class P5 {
         l = new Leerling("Wim");
         k.voegLeerlingToe(l);
         System.out.println(k);
-        k.wijzigCijfer(new String("Hans"), 7.6);
+        k.wijzigCijfer(new String("Wim"), 7.6);
         k.wijzigCijfer("Klaas", 7.6);
         System.out.println(k.toString());
         System.out.println("Aantal leerlingen: " + k.aantalLeerlingen());
@@ -34,16 +34,15 @@ class Klas {
     }
 
     public void wijzigCijfer(String naam, double newCijfer) {
-        if (getLeerlingen().getNaam().equals(naam)) {
-            getLeerlingen().setCijfer(newCijfer);
+        for (Leerling leerling : leerlingen) {
+            if (leerling.getNaam().equals(naam)) {
+                leerling.setCijfer(newCijfer);
+            }
         }
     }
 
-    public Leerling getLeerlingen() {
-        for (Leerling leerling : leerlingen) {
-            return leerling;
-        }
-        return null;
+    public ArrayList<Leerling> getLeerlingen() {
+        return leerlingen;
     }
 
     public int aantalLeerlingen() {

@@ -41,12 +41,8 @@ class Persoon {
 
     public boolean koop(Game newGame) {
         if (budget > newGame.huidigeWaarde()) {
-            if (!gameList.isEmpty()) {
-                for (Game game : gameList) {
-                    if (game.getNaam().equals(newGame.getNaam())) {
-                        return false;
-                    }
-                }
+            if (gameList.contains(newGame)) {
+                return false;
             }
             gameList.add(newGame);
             budget = budget - newGame.huidigeWaarde();
@@ -56,18 +52,8 @@ class Persoon {
     }
 
     public boolean verkoop(Game sellGame, Persoon koper) {
-        if (!gameList.isEmpty()) {
-            if (koper.budget > sellGame.huidigeWaarde()) {
-                if (!koper.gameList.isEmpty()) {
-                    for (Game game : koper.gameList) {
-                        if (game.equals(sellGame)) {
-                            return false;
-                        }
-                    }
-                }
-                koper.budget = koper.budget - sellGame.huidigeWaarde();
-                koper.gameList.add(sellGame);
-
+        if (gameList.contains(sellGame)) {
+            if (koper.koop(sellGame)) {
                 budget = budget + sellGame.huidigeWaarde();
                 gameList.remove(sellGame);
                 return true;
@@ -115,9 +101,12 @@ class Game {
         return prijs;
     }
 
-    public boolean equals(Game game) {
-
-        return (game.releaseJaar == this.releaseJaar && game.naam.equals(this.naam));
+    @Override
+    public boolean equals(Object object) {
+        if (object instanceof Game game) {
+            return (game.releaseJaar == this.releaseJaar && game.naam.equals(this.naam));
+        }
+        return false;
     }
 
     @Override

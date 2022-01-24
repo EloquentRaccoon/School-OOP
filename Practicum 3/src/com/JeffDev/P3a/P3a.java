@@ -27,8 +27,9 @@ class Voetbalclub {
     private int aantalPunten = 0;
     private final String naam;
 
+
     public Voetbalclub(String naam){
-        if(naam.isEmpty()){
+        if(naam == null || naam.isEmpty()){
             naam = "FC";
         }
         this.naam = naam;
